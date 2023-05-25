@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx/home_screen.dart';
+import 'package:getx/hw_calculate.dart';
 import 'package:getx/screen_one.dart';
 import 'package:getx/screen_two.dart';
 
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HomeScreen(),
+      home: const HWClaculate(),
     );
   }
 }
