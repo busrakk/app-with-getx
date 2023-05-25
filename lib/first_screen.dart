@@ -1,31 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:getx/controllers/home_controller.dart';
-import 'package:getx/first_screen.dart';
 
-class StateMang extends StatefulWidget {
-  const StateMang({super.key});
+class FirstScreen extends StatefulWidget {
+  const FirstScreen({super.key});
 
   @override
-  State<StateMang> createState() => _StateMangState();
+  State<FirstScreen> createState() => _FirstScreenState();
 }
 
-class _StateMangState extends State<StateMang> {
+class _FirstScreenState extends State<FirstScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("GetBuilder - State Management"),
-        actions: [
-          IconButton(
-              onPressed: () {
-                Get.to(() => const FirstScreen());
-              },
-              icon: const Icon(
-                Icons.chevron_right,
-                size: 35,
-              ))
-        ],
+        title: const Text("Screen one"),
       ),
       body: Center(
         child: Column(
@@ -37,9 +26,9 @@ class _StateMangState extends State<StateMang> {
               builder: (controller) => Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(
-                    controller.name,
-                    style: const TextStyle(fontSize: 30),
+                  const Text(
+                    "SCREEN ONE",
+                    style: TextStyle(fontSize: 30),
                   ),
                   Text(
                     controller.counter.toString(),
