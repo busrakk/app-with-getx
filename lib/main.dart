@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx/home_screen.dart';
-import 'package:getx/hw_calculate.dart';
+import 'package:getx/language.dart';
+import 'package:getx/languages/languages.dart';
 import 'package:getx/screen_one.dart';
 import 'package:getx/screen_two.dart';
 
@@ -28,7 +29,10 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const HWClaculate(),
+      home: const Language(),
+
+      locale: const Locale('en', 'US'), // varsayılan dil
+      translations: Languages(),
     );
   }
 }
