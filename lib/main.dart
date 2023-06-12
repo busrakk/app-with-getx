@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx/bindings/home_binding.dart';
 import 'package:getx/home_screen.dart';
 import 'package:getx/languages/languages.dart';
 import 'package:getx/screen_one.dart';
 import 'package:getx/screen_two.dart';
-import 'package:getx/state_mang.dart';
+import 'package:getx/screens/screen_home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +30,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const StateMang(),
+      home: const ScreenHome(),
+      initialBinding:
+          HomeBinding(), // bindings klasörü için eklendi - uygulama çalışır çalışmaz state management nesnesi oluşturulur
 
       locale: const Locale('en', 'US'), // varsayılan dil
       translations: Languages(),
