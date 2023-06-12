@@ -5,9 +5,11 @@ import 'package:getx/home_screen.dart';
 import 'package:getx/languages/languages.dart';
 import 'package:getx/screen_one.dart';
 import 'package:getx/screen_two.dart';
-import 'package:getx/screens/screen_home.dart';
+import 'package:get_storage/get_storage.dart';
+import 'package:getx/screens/storage_screen.dart';
 
-void main() {
+void main() async {
+  await GetStorage.init(); // uygulama içinde storage erişme
   runApp(const MyApp());
 }
 
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const ScreenHome(),
+      home: const StorageScreen(),
       initialBinding:
           HomeBinding(), // bindings klasörü için eklendi - uygulama çalışır çalışmaz state management nesnesi oluşturulur
 
